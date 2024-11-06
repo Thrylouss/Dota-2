@@ -1,0 +1,276 @@
+/*Header*/
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    position: absolute;
+    z-index: 15;
+}
+
+
+
+.header-content {
+    width: 60%;;
+}
+
+.header-button {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-button button {
+    background: none;
+    border: 3px solid #838383;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 30px;
+    font-size: 20px;
+    transition: 0.3s ease-out;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+}
+
+.nav-bar li {
+    list-style: none;
+    font-size: 30px;
+    display: flex;
+}
+
+.nav-bar li a {
+    text-decoration: none;
+    color: #aaaaaa;
+    transition: 0.3s ease-out;
+    padding: 20px;
+}
+
+.nav-bar li a:hover {
+    color: white;
+}
+
+:is(.header-button, .main-button) button:hover {
+    transform: translateY(-10px);
+    border: 3px solid #ff4400;
+}
+
+.header-button button i, p {
+    font-size: 20px;
+}
+
+.nav-bar li a img {
+    width: 200px;
+    height: 40px;
+    transition: 0.3s ease-out;
+}
+
+.nav-bar li a img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+/*Mini News Card*/
+.mini-news {
+    width: 100vw;
+    height: 320px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    gap: 30px;
+    box-shadow: 0 0 20px 40px rgba(0, 0, 0, 0.9);
+}
+
+.mini-heroes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -2;
+}
+
+.mini-heroes img {
+    width: 100%;
+    position: relative;
+    z-index: -2;
+}
+
+.mini-info {
+    width: 100vw;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin-top: 10%;
+    gap: 50px;
+    box-shadow: 0 0 50px 50px rgba(0, 0, 0, 0.9);
+}
+
+.mini-info p {
+    color: white;
+    text-align: center;
+    width: 50%;
+    font-size: 30px;
+}
+
+.mini-news-card {
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.mini-news-card:hover .mini-news-card-content {
+    transform: translateY(0%);
+}
+
+.mini-news-card:hover .text {
+    display: block;
+}
+
+.mini-news-card-content {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    transform: translateY(60%);
+    text-align: center;
+    padding-top: 20px;
+    transition: 0.8s ease;
+    flex-direction: column;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.60);
+}
+
+.show {
+    transform: translateY(60%);
+}
+
+.hide {
+    transform: translateY(150%);
+    opacity: 0;
+}
+
+.slide {
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.text {
+    display: none;
+}
+
+/*About*/
+
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 50px 150px;
+    height: 500px;
+    background: url("https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react//home/background4.png");
+    background-size: cover;
+}
+
+.about div {
+    padding-bottom: 50px;
+}
+
+.about h1 {
+    color: white;
+    font-size: 120px;
+}
+
+/*Footer*/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.footer-image {
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
+}
+
+.footer p {
+    width: 700px;
+    text-align: center;
+    color: #838383;
+}
+
+.footer-image img {
+    width: 200px;
+    height: 40px;
+}
+
+
+/*Heroes*/
+
+.heroes-headers {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8%;
+    width: 50%;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.heroes-headers h1 {
+    font-size: 70px;
+}
